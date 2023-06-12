@@ -25,6 +25,7 @@ namespace ModalModelessPrac32
         public Form1()
         {
             InitializeComponent();
+            IsMdiContainer = true; //자식을 가질 거라는 뜻
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace ModalModelessPrac32
             do
             {
                 result = MessageBox.Show("내용", "제목", MessageBoxButtons.RetryCancel);
-            } while (result == DialogResult.Cancel); //반복 시키라는 뜻
+            } while (result == DialogResult.Retry); //반복 시키라는 뜻
 
             if(result == DialogResult.Cancel)
             {
@@ -56,6 +57,7 @@ namespace ModalModelessPrac32
         {
             //Modaless는 여러 개 띄울 수 있다
             CustomForm form = new CustomForm();
+            form.MdiParent = this; //커스텀폼 엄마는 Form1이라는 뜻
             form.Show();
         }
     }
