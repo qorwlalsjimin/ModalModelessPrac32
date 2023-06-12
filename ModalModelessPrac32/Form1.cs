@@ -57,7 +57,7 @@ namespace ModalModelessPrac32
         {
             //Modaless는 여러 개 띄울 수 있다
             CustomForm form = new CustomForm();
-            form.MdiParent = this; //커스텀폼 엄마는 Form1이라는 뜻
+            form.MdiParent = this; //커스텀폼 엄마는 Form1이라는 뜻 
             form.Show();
         }
     }
