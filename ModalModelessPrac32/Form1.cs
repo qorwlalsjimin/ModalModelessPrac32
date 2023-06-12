@@ -25,7 +25,7 @@ namespace ModalModelessPrac32
         public Form1()
         {
             InitializeComponent();
-            IsMdiContainer = true; //자식을 가질 거라는 뜻
+            //IsMdiContainer = true; //자식을 가질 거라는 뜻
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,8 +57,14 @@ namespace ModalModelessPrac32
         {
             //Modaless는 여러 개 띄울 수 있다
             CustomForm form = new CustomForm();
-            form.MdiParent = this; //커스텀폼 엄마는 Form1이라는 뜻 
+            //form.MdiParent = this; //커스텀폼 엄마는 Form1이라는 뜻 
             form.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 form = new Form2();
+            form.ShowDialog();
         }
     }
 }
