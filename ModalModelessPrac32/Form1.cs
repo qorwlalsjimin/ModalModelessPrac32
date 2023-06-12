@@ -51,5 +51,12 @@ namespace ModalModelessPrac32
                 MessageBox.Show("사용자가 취소하였습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Modaless는 여러 개 띄울 수 있다
+            CustomForm form = new CustomForm();
+            form.Show();
+        }
     }
 }
